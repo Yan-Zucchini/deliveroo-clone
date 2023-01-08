@@ -9,6 +9,7 @@ import {
   UserIcon,
 } from "react-native-heroicons/outline";
 import Categories from "../components/Categories";
+import FeaturedRow from "../components/FeaturedRow";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -55,14 +56,24 @@ const HomeScreen = () => {
 
       {/* Body */}
       <ScrollView className="bg-gray-100">
-        {/* <Image
-          source={{
-            uri: "https://links.papareact.com/wru",
-          }}
-          className="w-20 h-20 rounded"
-        /> */}
-        {/* Categories */}
         <Categories />
+
+        {/* Featured Rows */}
+        <FeaturedRow
+          id="123"
+          title="Featured"
+          description="Paid placements for our partners"
+        />
+        <FeaturedRow
+          id="1234"
+          title="Tasty Discounts"
+          description="Everyone's been enjoying these juicy discounts!"
+        />
+        <FeaturedRow
+          id="1235"
+          title="Offers new you!"
+          description="Why not support your local restaurant tonight!"
+        />
       </ScrollView>
     </SafeAreaView>
   );
